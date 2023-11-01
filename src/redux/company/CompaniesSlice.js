@@ -26,5 +26,18 @@ const companiesSlice = createSlice({
 name:'companies',
 initialState,
 reducer :{},
-
+extraReducers:(builder)=>{
+    builder.addCase(companiesData.fulfilled,(state,action)=>{
+        state.companies= action.payload;
+        state.isLoading=false;
+    })
+    builder.addCase(companiesData.pending,(state,action)=>{
+        state.isLoading=true;
+        state.error= action.error.message;
+    })
+    builder.addCase(companiesData.rejected,(state,action)=>{
+        state.isLoading=false;
+        state.error= action.error.message;
+    })
+}
 })
