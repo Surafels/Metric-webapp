@@ -23,5 +23,8 @@ const companiesDetails = createAsyncThunk('companies/copmpaniesDetails', async()
 })
 
 const companiesSlice = createSlice({
+name:'companies',
+initialState,
+reducer :{},
 
 })
