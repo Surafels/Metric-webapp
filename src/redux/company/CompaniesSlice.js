@@ -16,5 +16,12 @@ const companiesData = createAsyncThunk('companies/companiesData', async()=>{
     const data = respone.json();
     return data;
 })
+const companiesDetails = createAsyncThunk('companies/copmpaniesDetails', async()=>{
+    const respone = await fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${apiKey}`);
+    const data= respone.json();
+    return data;
+})
 
+const companiesSlice = createSlice({
 
+})
