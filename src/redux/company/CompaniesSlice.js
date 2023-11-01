@@ -11,12 +11,12 @@ const initialState = {
   error: false,
 };
 
-const companiesData = createAsyncThunk('companies/companiesData', async()=>{
+export const companiesData = createAsyncThunk('companies/companiesData', async()=>{
     const respone = await fetch(url);
     const data = respone.json();
     return data;
 })
-const companiesDetails = createAsyncThunk('companies/copmpaniesDetails', async()=>{
+export const companiesDetails = createAsyncThunk('companies/copmpaniesDetails', async()=>{
     const respone = await fetch(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${apiKey}`);
     const data= respone.json();
     return data;
@@ -25,7 +25,7 @@ const companiesDetails = createAsyncThunk('companies/copmpaniesDetails', async()
 const companiesSlice = createSlice({
 name:'companies',
 initialState,
-reducer :{},
+reducers :{},
 extraReducers:(builder)=>{
     builder.addCase(companiesData.fulfilled,(state,action)=>{
         state.companies= action.payload;
@@ -53,3 +53,5 @@ extraReducers:(builder)=>{
     })
 }
 })
+
+export default companiesSlice.reducer;
