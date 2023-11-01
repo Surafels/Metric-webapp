@@ -12,5 +12,9 @@ const initialState = {
 };
 
 const companiesData = createAsyncThunk('companies/companiesData', async()=>{
-    
+    const respone = await fetch(url);
+    const data = respone.json();
+    return data;
 })
+
+
