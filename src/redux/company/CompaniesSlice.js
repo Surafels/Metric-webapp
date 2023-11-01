@@ -39,5 +39,17 @@ extraReducers:(builder)=>{
         state.isLoading=false;
         state.error= action.error.message;
     })
+    builder.addCase(companiesDetails.fulfilled,(state,action)=>{
+        state.companies= action.payload;
+        state.isLoading=false;
+    })
+    builder.addCase(companiesDetails.pending,(state,action)=>{
+        state.isLoading=true;
+        state.error= action.error.message;
+    })
+    builder.addCase(companiesDetails.rejected,(state,action)=>{
+        state.isLoading=false;
+        state.error= action.error.message;
+    })
 }
 })
