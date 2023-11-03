@@ -14,8 +14,8 @@ const Companies = () => {
     dispatch(companiesData());
   }, [dispatch]);
 
-  const filteredCompanies = companies.filter((company) =>
-   company.name.toLowerCase().includes(search.toLowerCase()));
+  const filteredCompanies = companies.filter((company) => company.name.toLowerCase()
+    .includes(search.toLowerCase()));
 
   if (error) {
     return (
@@ -44,8 +44,8 @@ const Companies = () => {
           placeholder="Search company by name"
         />
         <div className="header-icon">
-          <FontAwesomeIcon icon={faMicrophone} />
-          <FontAwesomeIcon icon={faCog} />
+          <FontAwesomeIcon icon={faMicrophone} className="icons"/>
+          <FontAwesomeIcon icon={faCog} className="icons"/>
         </div>
       </div>
 

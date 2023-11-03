@@ -1,0 +1,92 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+.App{
+    background-color:rgb(236,76,138);
+}
+
+.title{
+    font-size:24px;
+    color:white;
+    margin-left:24px;
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa{
+    width:24px;
+    height:24px;
+}
+
+.cards{ 
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.card{
+    display:grid;
+    padding:16px;
+    height:144px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    padding:14px;
+    align-items:center;
+}
+
+.header-icon {
+    display:flex;
+    gap: 24px;
+    color:white;
+    margin-right:14px;
+
+}
+
+.icons {
+    width:24px;
+    height:24px;
+}
+
+.search{
+    display:flex;
+    align-items:center;
+    width: 30%;
+    padding:14px;
+    border-radius: 2px;
+    margin: 4px;
+    border: none;
+}
+
+.company-data {
+    padding: 16px;
+    display: grid;
+    color:white;
+    text-decoration:none;
+}
+
+@media screen  and (min-width: 768px) {
+.header{
+    display:flex;
+    justify-content:space-between;
+    padding:24px;
+    align-items:center;
+}
+
+.header-icon{
+    display:flex;
+}
+
+.cards{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.search{
+    
+    width: 60%;
+ 
+}
+}
