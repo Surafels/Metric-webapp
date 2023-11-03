@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -28,15 +27,6 @@ const CompanyDetails = () => {
     );
   }
 
-  if (!company) {
-    // Handle case when company details are not found
-    return (
-      <div>
-        <p>Company details not found.</p>
-        <Link to="/">Go back</Link>
-      </div>
-    );
-  }
 
   const { name, stockExchange, exchangeShortName } = company;
 
