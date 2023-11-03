@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function companyNotFound() {
+function CompanyNotFound() {
   return (
     <div className="no-company">
       <h2>Page Not Found</h2>
@@ -10,4 +10,4 @@ function companyNotFound() {
   );
 }
 
-export default  companyNotFound;
+export default CompanyNotFound;

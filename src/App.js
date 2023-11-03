@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Companies from './components/Companies';
 import CompanyDetails from './components/CompanyDetail';
-import companyNotFound from './components/CompanyNotfound';
+import CompanyNotFound from './components/CompanyNotfound';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Companies />} />
         <Route path="/details/:symbol" element={<CompanyDetails />} />
-        <Route path="*" element={<companyNotFound/>} />
+        <Route path="*" element={<CompanyNotFound />} />
       </Routes>
     </div>
   );

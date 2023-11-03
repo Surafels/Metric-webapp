@@ -27,7 +27,6 @@ const CompanyDetails = () => {
     );
   }
 
-
   const { name, stockExchange, exchangeShortName } = company;
 
   return (

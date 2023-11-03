@@ -54,9 +54,9 @@ const Companies = () => {
           <Link className="link" key={company.symbol} to={`details/${company.symbol}`}>
             <div className="card">
               <span className="company-data">
-              <div className="circle-container">
-<FontAwesomeIcon icon={faArrowCircleRight} className="faArrowCircleRight" />
-</div>
+                <div className="circle-container">
+                  <FontAwesomeIcon icon={faArrowCircleRight} className="faArrowCircleRight" />
+                </div>
                 <h3 className="symbol">{company.symbol}</h3>
                 <p className="name">{company.currency}</p>
               </span>
