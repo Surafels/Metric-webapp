@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Companies from './components/Companies';
-import CompanyDetail from './components/CompanyDetail';
+import CompanyDetails from './components/CompanyDetail';
 // import Header from './components/Header';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Companies />} />
-        <Route path="/details/:symbol" element={<CompanyDetail />} />
+        <Route path="/details/:symbol" element={<CompanyDetails />} />
       </Routes>
     </div>
   );

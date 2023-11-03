@@ -44,8 +44,8 @@ const Companies = () => {
           placeholder="Search company by name"
         />
         <div className="header-icon">
-          <FontAwesomeIcon icon={faMicrophone} className="icons"/>
-          <FontAwesomeIcon icon={faCog} className="icons"/>
+          <FontAwesomeIcon icon={faMicrophone} className="icons" />
+          <FontAwesomeIcon icon={faCog} className="icons" />
         </div>
       </div>
 

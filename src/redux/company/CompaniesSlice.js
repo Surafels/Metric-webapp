@@ -13,6 +13,12 @@ export const companiesData = createAsyncThunk('companies/fetchData', async () =>
   return data;
 });
 
+export const companiesDetails = createAsyncThunk('companyDetails/fetchData', async () => {
+  const response = await fetch('https://financialmodelingprep.com/api/v3/search?query=AA&apikey=66bccab5c51dff5ab45457f9fa2d1bea');
+  const data = await response.json();
+  return data;
+});
+
 const companiesSlice = createSlice({
   name: 'companies',
   initialState,
@@ -27,6 +33,18 @@ const companiesSlice = createSlice({
       state.error = false;
     });
     builder.addCase(companiesData.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.error.message;
+    });
+    builder.addCase(companiesDetails.fulfilled, (state, action) => {
+      state.companyDetails = action.payload;
+      state.isLoading = false;
+    });
+    builder.addCase(companiesDetails.pending, (state) => {
+      state.isLoading = true;
+      state.error = false;
+    });
+    builder.addCase(companiesDetails.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.error.message;
     });
