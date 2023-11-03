@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faMicrophone, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { companiesData } from '../redux/company/CompaniesSlice';
 
 const Companies = () => {
@@ -55,6 +55,9 @@ const Companies = () => {
           <Link className="link" key={company.symbol} to={`details/${company.symbol}`}>
             <div className="card">
               <span className="company-data">
+              <div className="circle-container">
+<FontAwesomeIcon icon={faArrowCircleRight} className="faArrowCircleRight" />
+</div>
                 <h3 className="symbol">{company.symbol}</h3>
                 <p className="name">{company.currency}</p>
               </span>
