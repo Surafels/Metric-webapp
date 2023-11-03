@@ -1,19 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faMicrophone, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import { companiesData } from '../redux/company/CompaniesSlice';
 
-function Companies() {
-  return (
-    <div>
-      <Link to="Companies"><FontAwesomeIcon icon={faArrowLeft} /></Link>
+const Companies = () => {
+  const [search, setSearch] = useState('');
+  const { companies, error, isLoading } = useSelector((state) => state.companies);
+  const dispatch = useDispatch();
 
-      <div>
-        <FontAwesomeIcon icon={faMicrophone} />
-        <FontAwesomeIcon icon={faCog} />
+  useEffect(() => {
+    dispatch(companiesData());
+  }, [dispatch]);
+
+  const filteredCompanies = companies.filter((company) =>
+   company.name.toLowerCase().includes(search.toLowerCase()));
+
+  if (error) {
+    return (
+      <div className="message">
+        Error:
+        {' '}
+        {error}
       </div>
-    </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="message">Loading ...</div>
+    );
+  }
+
+  return (
+    <>
+      <div className="header">
+        <p className="title">Companies</p>
+        <input
+          className="search"
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          placeholder="Search company by name"
+        />
+        <div className="header-icon">
+          <FontAwesomeIcon icon={faMicrophone} />
+          <FontAwesomeIcon icon={faCog} />
+        </div>
+      </div>
+
+      <div className="cards">
+        {filteredCompanies.map((company) => (
+          <Link className="link" key={company.symbol} to={`details/${company.symbol}`}>
+            <div className="card">
+              <span className="company-data">
+                <h3 className="symbol">{company.symbol}</h3>
+                <p className="name">{company.currency}</p>
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </>
   );
-}
+};
 
 export default Companies;
