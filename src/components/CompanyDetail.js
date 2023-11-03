@@ -18,7 +18,6 @@ const CompanyDetails = () => {
   const company = companies.find((company) => company.symbol === symbol);
 
   if (isLoading || companyDetails.length === 0) {
-    // Handle case when company details are still loading
     return (
       <div>
         <p>Loading company details...</p>
