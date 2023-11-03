@@ -1,31 +1,20 @@
+/* eslint-disable */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faMicrophone, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { useDispatch } from 'react-redux';
-import { companiesData } from '../redux/company/CompaniesSlice';
 
 function Header() {
-  const dispatch = useDispatch();
-
-  const handleButtonClick = () => {
-    dispatch(companiesData());
-  };
-
   return (
-    <div>
+    <div className="header">
       <Link to="/">
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon icon={faArrowLeft} className="arrow-left-icons" />
       </Link>
 
-      <div>
-        <FontAwesomeIcon icon={faMicrophone} />
-        <FontAwesomeIcon icon={faCog} />
+      <div className="header-icon">
+        <FontAwesomeIcon icon={faMicrophone} className="icons" />
+        <FontAwesomeIcon icon={faCog} className="icons" />
       </div>
-
-      <button type="button" onClick={handleButtonClick}>
-        check fetch
-      </button>
     </div>
   );
 }

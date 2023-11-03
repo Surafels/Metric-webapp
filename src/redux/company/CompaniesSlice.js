@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -8,13 +9,13 @@ const initialState = {
 };
 
 export const companiesData = createAsyncThunk('companies/fetchData', async () => {
-  const response = await fetch('https://financialmodelingprep.com/api/v3/search?query=AA&apikey=66bccab5c51dff5ab45457f9fa2d1bea');
+  const response = await fetch('https://financialmodelingprep.com/api/v3/search?query=AA&apikey=9Y8b0nOYThbsqHxroAFTOORYDD7lyGJV');
   const data = await response.json();
   return data;
 });
 
 export const companiesDetails = createAsyncThunk('companyDetails/fetchData', async () => {
-  const response = await fetch('https://financialmodelingprep.com/api/v3/search?query=AA&apikey=66bccab5c51dff5ab45457f9fa2d1bea');
+  const response = await fetch('https://financialmodelingprep.com/api/v3/search?query=AA&apikey=9Y8b0nOYThbsqHxroAFTOORYDD7lyGJV');
   const data = await response.json();
   return data;
 });

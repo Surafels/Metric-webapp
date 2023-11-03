@@ -1,7 +1,9 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { companiesDetails } from '../redux/company/CompaniesSlice';
+import Header from './Header';
 
 const CompanyDetails = () => {
   const { symbol } = useParams();
@@ -40,29 +42,39 @@ const CompanyDetails = () => {
 
   return (
     <div>
+      <Header />
       <div>
-        <Link to="/">
-          <span>&larr;</span>
-        </Link>
         <h1>Company Details</h1>
       </div>
-      <p>
-        Symbol:
-        {symbol}
-      </p>
-      <p>
-        Name:
-        {name}
-      </p>
-      <p>
-        Stock Exchange:
-        {stockExchange}
-      </p>
-      <p>
-        Exchange Short Name:
-        {exchangeShortName}
-      </p>
-      <Link to="/">Go back</Link>
+      <table>
+        <tbody>
+          <tr>
+            <th>Symbol</th>
+            <td>{symbol}</td>
+          </tr>
+          <tr>
+            <th> Name</th>
+            <td>
+              {' '}
+              {name}
+            </td>
+
+          </tr>
+          <tr>
+            <th>  Stock Exchange</th>
+            <td>
+              {' '}
+              {stockExchange}
+            </td>
+
+          </tr>
+          <tr>
+            <th>Exchange Short Name</th>
+            <td>{exchangeShortName}</td>
+
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };

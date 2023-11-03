@@ -36,6 +36,8 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa{
     justify-content:space-between;
     padding:14px;
     align-items:center;
+    background:#d3215c;
+
 }
 
 .header-icon {
@@ -49,6 +51,9 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa{
 .icons {
     width:24px;
     height:24px;
+}
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+    color:white;
 }
 
 .search{
@@ -66,6 +71,47 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa{
     display: grid;
     color:white;
     text-decoration:none;
+}
+
+.company-det {
+    display:flex;
+    justify-content:space-between;
+}
+
+h1{
+    color:white;
+    margin: auto 24px;
+    padding: 24px;
+}
+
+table{
+    width:100%;
+}
+
+tr {
+    display:flex;
+    justify-content:space-between;
+    padding:16px;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background:#d3215c;
+
+}
+th , td {
+    padding:16px;
+}
+
+tr,tr:nth-child(2n) {
+    background: #b50e46;
+    color: white;
+}
+
+tr:nth-child(2n-1) {
+    background: #ec2165;
 }
 
 @media screen  and (min-width: 768px) {
