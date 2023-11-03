@@ -73,10 +73,20 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     text-decoration:none;
 }
 
-.company-det {
-    display:flex;
-    justify-content:space-between;
+.link{
+    background: #b50e46;
 }
+
+.link:nth-child(3n-1){
+    background:#d3215c;
+ 
+}
+
+ .link:nth-child(3n){
+    background: #ec2165;
+
+}
+
 
 h1{
     color:white;
