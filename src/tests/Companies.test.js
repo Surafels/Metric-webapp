@@ -13,7 +13,7 @@ describe('Companies', () => {
 
   it('should render correctly', () => {
     useSelector.mockReturnValue({ companies: [], error: null, isLoading: false });
-    useDispatch.mockReturnValue(jest.fn()); 
+    useDispatch.mockReturnValue(jest.fn());
     const tree = create(
       <BrowserRouter>
         <Companies />
@@ -24,7 +24,7 @@ describe('Companies', () => {
 
   it('should render loading message when isLoading is true', () => {
     useSelector.mockReturnValue({ companies: [], error: null, isLoading: true });
-    useDispatch.mockReturnValue(jest.fn()); 
+    useDispatch.mockReturnValue(jest.fn());
     const tree = create(
       <BrowserRouter>
         <Companies />
@@ -35,7 +35,7 @@ describe('Companies', () => {
 
   it('should render error message when there is an error', () => {
     useSelector.mockReturnValue({ companies: [], error: 'Some error message', isLoading: false });
-    useDispatch.mockReturnValue(jest.fn()); 
+    useDispatch.mockReturnValue(jest.fn());
     const tree = create(
       <BrowserRouter>
         <Companies />
@@ -50,7 +50,7 @@ describe('Companies', () => {
       { symbol: 'GOOGL', name: 'Alphabet Inc.', currency: 'USD' },
     ];
     useSelector.mockReturnValue({ companies: mockCompanies, error: null, isLoading: false });
-    useDispatch.mockReturnValue(jest.fn()); 
+    useDispatch.mockReturnValue(jest.fn());
     const tree = create(
       <BrowserRouter>
         <Companies />
