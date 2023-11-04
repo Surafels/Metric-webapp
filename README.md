@@ -117,7 +117,7 @@ To run tests, run the following command:
 
  ### Video 
 
- [Video link](https://www.loom.com/share/38f70a7ca02a480791a273b7555a60ec?sid=85bcf094-e1e0-4b0c-919e-206446e4ae65)
+ [Video link](https://www.loom.com/share/b4ad7beb504d4340900e212f1099f731?sid=6aec1714-7206-485e-96a0-9f3c78ec6e5e)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,7 +162,7 @@ If you like this project please give it a star and follow the authers on github 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Nelson Sakwa on Behance and the entire Microverse community and family for the support and motivation.
+I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on Behance and the entire Microverse community and family for the support and motivation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
