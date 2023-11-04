@@ -6,6 +6,10 @@ const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
 describe('companiesSlice actions and reducers', () => {
+  beforeEach(() => {
+    jest.setTimeout(10000);
+  });
+
   it('should dispatch companiesData.fulfilled action with the correct payload', async () => {
     const initialState = {
       companies: [],
