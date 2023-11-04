@@ -117,7 +117,7 @@ To run tests, run the following command:
 
  ### Video 
 
- [Live demo link](https://www.loom.com/share/38f70a7ca02a480791a273b7555a60ec?sid=85bcf094-e1e0-4b0c-919e-206446e4ae65)
+ [Video link](https://www.loom.com/share/38f70a7ca02a480791a273b7555a60ec?sid=85bcf094-e1e0-4b0c-919e-206446e4ae65)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
