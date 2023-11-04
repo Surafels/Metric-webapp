@@ -107,6 +107,7 @@ tr {
 th,
 td {
   padding: 16px;
+  color:white;
 }
 
 tr:nth-child(2n) {
