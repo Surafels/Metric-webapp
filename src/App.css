@@ -3,6 +3,7 @@
     margin:0;
     box-sizing:border-box;
     text-decoration: none;
+    font-family:sanserif;
 }
 
 .App{
@@ -135,6 +136,7 @@ tr:nth-child(2n-1) {
 .message {
     padding:24px;
     margin:24px auto;
+    color:white;
 }
 
 .no-company{
@@ -164,5 +166,22 @@ tr:nth-child(2n-1) {
     
     width: 60%;
  
+}
+
+h1{
+    margin-left:40%;
+}
+
+.message{
+    padding:24px;
+    margin:44px auto;
+    font-size:32px;
+    color:white;
+}
+
+.no-company{
+    padding:24px;
+    margin:24px auto;
+    font-size:32px;
 }
 }
